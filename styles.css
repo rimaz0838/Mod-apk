@@ -1,0 +1,158 @@
+    /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden;
+    background: #000;
+    position: relative;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search-bar {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.search-bar input {
+    padding: 0.5rem;
+    width: 50%;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+main {
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+/* App card styles */
+.app-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.app-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 0.5rem 1rem;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.download-button:hover {
+    background: #218838;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Background animation: Falling balls */
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    animation: fall linear infinite;
+    opacity: 0.8;
+}
+
+/* Falling animation */
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+    
+body {
+    color: #03ff6c; /* Makes all text white by default */
+}
+
+header {
+    color: #03ff6c; /* Ensures header text is white */
+}
+
+header nav ul li a {
+    color: #03ff6c; /* Nav links */
+}
+
+footer {
+    color: #03ff6c; /* Footer text */
+}
+
+/* Ensure text inside app cards remains visible */
+.app-card {
+    color: #333; /* Keep the text inside the app card black for contrast */
+}
+.app-card img {
+    width: 100%; /* Adjust width to fit the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: round the corners */
+}
